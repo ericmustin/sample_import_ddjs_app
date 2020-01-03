@@ -6,7 +6,7 @@ import axios from 'axios';
 async function getTracer() {
 	let response
 	try {
-		response = await axios('http://169.254.169.254/latest/meta-data/local-ipv4')	
+		response = await axios('http://169.254.169.254/latest/meta-data/local-ipv4', {timeout: 2000})	
 	} catch(e) {
 		console.warn('error fetching agent hostname')
 	}
