@@ -17,7 +17,7 @@ async function getTracer() {
 		console.warn('response metadata missing, defaulting to localhost')	
 	}
 
-	tracer.init({ debug: true, host: host });
+	tracer.init({ debug: true, hostname: host });
 	return tracer
 }
 
